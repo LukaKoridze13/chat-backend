@@ -33,5 +33,4 @@ router.get("/:name", (req, res) => {
     }
   });
 });
-
 export default router;
