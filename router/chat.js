@@ -22,7 +22,12 @@ router.get("/", (req, res) => {
   });
 });
 router.delete("/", (req, res) => {
-  chatModel.deleteOne({ username: req.body.username, date: req.body.date });
+  chatModel.find({ username: req.body.username, date: req.body.date }).then(res=>{
+    console.log(res)
+  })
+  chatModel.deleteOne({ username: req.body.username, date: req.body.date }).then(res=>{
+    console.log(res)
+  });
 });
 
 export default router;
