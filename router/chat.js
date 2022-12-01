@@ -21,5 +21,9 @@ router.get("/", (req, res) => {
     }
   });
 });
+router.delete("/", (req, res) => {
+  chatModel.deleteOne({_id: req.body.id})
+  res.send("Message Deleted")
+});
 
 export default router;
